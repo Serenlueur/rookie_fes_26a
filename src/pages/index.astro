@@ -33,7 +33,7 @@ function formatDate(iso: string | number | Date) {
       <p class="hero-eyebrow">本当のルーキー祭り2026秋</p>
       <h1 class="hero-title">全部聴く</h1>
       <p class="hero-desc">
-        参加者{count}組の楽曲を、投稿順に聴いて感想メモ。個人の感想です。曲数カウントは最新じゃない場合があります。毎日確認して更新するので怒らないでください!
+        参加者{count}組の楽曲を、投稿順に聴いて感想メモ。個人の感想です。
       </p>
       <p class="hero-desc">
         これ書いてる人 : <a href="https://twitter.com/Serenlueur" target="_blank" rel="noopener noreferrer">Serenlueur(せれんりゅーる)</a>
@@ -49,6 +49,13 @@ function formatDate(iso: string | number | Date) {
         <li>2026/09/11 23:47 071-080追加 3,2,1,いくぞおおお</li>
         <li>2026/09/12 14:23 081-090追加 ロック畑、再び</li>
       </ul>
+      <div class="controller">
+        <a href="#100" class="jump_button">100曲目へ</a>
+        <a href="#150" class="jump_button">150曲目へ</a>
+        <a href="#200" class="jump_button">200曲目へ</a>
+        <a href="#250" class="jump_button">250曲目へ</a>
+        <a href="#300" class="jump_button">300曲目へ</a>
+      </div>
     </header>
 
     <main class="list">
@@ -100,6 +107,7 @@ function formatDate(iso: string | number | Date) {
     font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
 
   .hero {
@@ -128,6 +136,36 @@ function formatDate(iso: string | number | Date) {
     margin: 10px 0;;
     color: var(--text-muted);
     font-size: 1rem;
+  }
+  .controller{
+    display: flex;
+    gap: 20px;
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+  .jump_button{
+    display: block;
+    width: 96px;
+    padding: 8px 12px;
+    background-color: #d7d6d2;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .jump_button:link {
+  color: #17170f; /* 未訪問 */
+  }
+
+  .jump_button:visited {
+    color: #17170f; /* 訪問済み */
+  }
+
+  .jump_button:hover {
+    color: #17170f; /* マウスを乗せたとき */
+  }
+
+  .jump_button:active {
+    color: #17170f; /* クリック中 */
   }
 
   .list {
