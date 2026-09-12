@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 .sstro
 .DS_Store
+package-lock.json
 
 ### Node ###
 # Logs
