@@ -54,7 +54,7 @@ function formatDate(iso: string | number | Date) {
       {
         sorted.map((song) => (
           <article class="entry">
-            <div class="entry-number" aria-hidden="true">{String(song.order).padStart(3, '0')}</div>
+            <div id={String(song.order).padStart(3, '0')} class="entry-number" aria-hidden="true">{String(song.order).padStart(3, '0')}</div>
             <div class="entry-body">
               <h2 class="entry-title">{song.title}</h2>
               <p class="entry-artist">{song.artist} さん</p>
