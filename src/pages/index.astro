@@ -3,6 +3,7 @@ import songs from '../data/songs.json';
 
 const sorted = [...songs].sort((a, b) => a.order - b.order);
 const count = sorted.length;
+const IS_UPDATING = true; 
 
 function formatDate(iso: string | number | Date) {
   if (!iso) return null;
@@ -32,6 +33,8 @@ function formatDate(iso: string | number | Date) {
     <header class="hero">
       <p class="hero-eyebrow">本当のルーキー祭り2026秋</p>
       <h1 class="hero-title">全部聴く</h1>
+      {IS_UPDATING && <div class="wip-banner">追記作業中...</div>}
+
       <p class="hero-desc">
         参加者{count}組の楽曲を、投稿順に聴いて感想メモ。個人の感想です。
       </p>
@@ -150,6 +153,26 @@ function formatDate(iso: string | number | Date) {
     margin: 10px 0;;
     color: var(--text-muted);
     font-size: 1rem;
+  }
+
+  .wip-banner {
+    max-width: 800px;
+    /* margin: 0 auto; */
+    color: #c22a2a;
+    font-weight: 700;
+    font-size: 0.9rem;
+    /* text-align: center; */
+    animation: wip-pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes wip-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
   }
   .controller{
     display: flex;
