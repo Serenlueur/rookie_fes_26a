@@ -3,7 +3,7 @@ import songs from '../data/songs.json';
 
 const sorted = [...songs].sort((a, b) => a.order - b.order);
 const count = sorted.length;
-const IS_UPDATING = true; 
+const IS_UPDATING = false; 
 
 function formatDate(iso: string | number | Date) {
   if (!iso) return null;
@@ -65,6 +65,7 @@ function formatDate(iso: string | number | Date) {
         <li>2026/09/13 22:46 10曲くらいランダムで追加 350曲目へのジャンプボタン追加。</li>
         <li>2026/09/20 15:36 200まで追加 ランダムで20曲くらい追加</li>
         <li>2026/10/2 23:47 お久しぶりです。220前後+ランダムに追加</li>
+        <li>2026/10/4 0:12 234まで追加</li>
       </ul>
       <div class="controller">
         <a href="#100" class="jump_button">100曲目へ</a>
